@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Download Page</title>
+    <style>
+        /* Animated blue-white gradient background */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #007BFF, #00BFFF, #ffffff, #87CEFA);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Glassy button */
+        .download-button {
+            padding: 20px 40px;
+            font-size: 20px;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        /* Hover effect */
+        .download-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="download-button" id="downloadBtn">Download Plugin</button>
+
+    <script>
+        const button = document.getElementById("downloadBtn");
+
+        button.addEventListener("click", () => {
+            // File to download (replace with your file URL)
+            const fileUrl = "https://github.com/nznaisjd-byte/Test/raw/refs/heads/main/RockConvertor.rbxm"; // Replace this with your file link
+            const a = document.createElement("a");
+            a.href = fileUrl;
+            a.download = "file.zip"; // File name after download
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
